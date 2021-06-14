@@ -17,5 +17,6 @@ ThisBuild / crossScalaVersions := supportedScalaVersions
 lazy val root = (project in file("."))
   .settings(
     name := "test19",
-    libraryDependencies += scalaTest % Test
+    libraryDependencies += scalaTest % Test,
+    connectInput in run := true
   )
