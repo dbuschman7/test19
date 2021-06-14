@@ -1,10 +1,10 @@
 package example
 
-import org.scalatest.flatspec.AnyFlatSpec
-import org.scalatest.matchers.should.Matchers
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.must.Matchers
 
-class HelloSpec extends AnyFlatSpec with Matchers {
-  "The Hello object" should "say hello" in {
-    Hello.greeting shouldEqual "hello"
+class HelloSpec extends AnyFunSuite with Matchers {
+  test("say hello") {
+    Hello.greeting mustBe "hello"
   }
 }
